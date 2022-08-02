@@ -27,10 +27,7 @@ def predict():
     Parch = float(request.args.get('Parch'))
     Fare = float(request.args.get('Fare'))
     Sex = float(request.args.get('Sex'))
-    if Sex == 1:
-        Sex = 'male'
-    else:
-        Sex = 'female'
+
 
     
     prediction = model1.predict([[Pclass, Sex, Age, SibSp, Parch, Fare]])
